@@ -1,0 +1,76 @@
+/* Основные стили бренда Газпром */
+:root {
+    --gazprom-blue: #0072CE;
+    --gazprom-dark-blue: #005AA0;
+    --gazprom-red: #E30613;
+    --gazprom-light-gray: #F5F5F5;
+    --gazprom-white: #FFFFFF;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: var(--gazprom-light-gray);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gazprom-header {
+    background: linear-gradient(135deg, var(--gazprom-blue) 0%, var(--gazprom-dark-blue) 100%);
+    border-bottom: 4px solid var(--gazprom-red);
+}
+
+.gazprom-logo {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.gazprom-logo img {
+    height: 60px;
+    margin-right: 20px;
+}
+
+.gazprom-logo h1 {
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--gazprom-white);
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.gazprom-nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.gazprom-nav li {
+    margin-right: 30px;
+}
+
+.gazprom-nav a {
+    color: var(--gazprom-white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 5px 0;
+    position: relative;
+}
+
+.gazprom-nav a:hover:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--gazprom-red);
+}

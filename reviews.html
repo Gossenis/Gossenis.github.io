@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы - ГазТранс</title>
+    <link rel="stylesheet" href="css/gazprom-style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка (как в предыдущих примерах) -->
+    <header class="gazprom-header">
+        <div class="container">
+            <div class="gazprom-logo">
+                <img src="images/gazprom-logo.png" alt="ГазТранс">
+                <h1>ГазТранс</h1>
+            </div>
+            <nav class="gazprom-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="reviews.html" class="active">Отзывы</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container reviews-page">
+        <a href="index.html" class="gazprom-back-button">← Назад</a>
+        
+        <h2 class="section-title"><span>Отзывы наших клиентов</span></h2>
+        
+        <div class="reviews-intro">
+            <p>Мы ценим каждого клиента и стремимся к совершенству в качестве услуг. Ваше мнение помогает нам становиться лучше.</p>
+        </div>
+        
+        <!-- Контейнер для отзывов -->
+        <section class="reviews-grid" id="reviews-container">
+            <!-- Отзывы будут загружаться здесь через JS -->
+        </section>
+        
+        <!-- Форма добавления отзыва -->
+        <section class="add-review">
+            <h3><i class="fas fa-pencil-alt"></i> Оставить отзыв</h3>
+            <form class="review-form" id="review-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="review-name">Ваше имя*</label>
+                        <input type="text" id="review-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-company">Компания</label>
+                        <input type="text" id="review-company">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Оценка*</label>
+                    <div class="rating-stars">
+                        <i class="far fa-star" data-rating="1"></i>
+                        <i class="far fa-star" data-rating="2"></i>
+                        <i class="far fa-star" data-rating="3"></i>
+                        <i class="far fa-star" data-rating="4"></i>
+                        <i class="far fa-star" data-rating="5"></i>
+                        <input type="hidden" id="review-rating" value="0" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="review-text">Ваш отзыв*</label>
+                    <textarea id="review-text" rows="5" required></textarea>
+                </div>
+                <div class="form-group captcha-group">
+                    <label>Введите капчу: <span id="captcha-text">X3Y9Z2</span></label>
+                    <input type="text" id="captcha-input" required>
+                </div>
+                <button type="submit" class="gazprom-button">Отправить отзыв</button>
+            </form>
+        </section>
+        
+        <div class="reviews-note">
+            <p><i class="fas fa-info-circle"></i> Все отзывы проходят модерацию перед публикацией. Мы публикуем только реальные отзывы от наших клиентов.</p>
+        </div>
+    </main>
+
+    <footer class="gazprom-footer">
+        <div class="container">
+            <p>© 2023 ГазТранс. Все права защищены.</p>
+            <p>SSL сертификат подтверждён <span class="ssl-verified">✓</span></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Инициализация
+            generateCaptcha();
+            loadReviews();
+            setupRatingStars();
+            setupForm();
+        });
+
+        // Генерация капчи
+        function generateCaptcha() {
+            const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            let captcha = '';
+            for (let i = 0; i < 6; i++) {
+                captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            document.getElementById('captcha-text').textContent = captcha;
+            return captcha;
+        }
+
+        // Загрузка отзывов из localStorage
+        function loadReviews() {
+            const reviewsContainer = document.getElementById('reviews-container');
+            const savedReviews = JSON.parse(localStorage.getItem('gaztrans-reviews')) || [];
+            
+            if (savedReviews.length === 0) {
+                // Примеры отзывов при первом посещении
+                const sampleReviews = [
+                    {
+                        name: "Иван Петров",
+                        company: "ООО 'ГазСнаб'",
+                        rating: 5,
+                        text: "Сотрудничаем с ГазТранс уже более 5 лет. Всегда стабильные поставки, четкое соблюдение сроков. Отдельно хочу отметить работу менеджеров - всегда на связи, оперативно решают любые вопросы.",
+                        date: "15 марта 2023"
+                    },
+                    {
+                        name: "Светлана Михайлова",
+                        company: "АО 'ТеплоГаз'",
+                        rating: 4.5,
+                        text: "Заказывали транспортировку газа в отдаленный регион. Все было выполнено в срок, несмотря на сложные погодные условия. Единственное пожелание - сделать более гибкую систему скидок для постоянных клиентов.",
+                        date: "2 февраля 2023"
+                    }
+                ];
+                
+                localStorage.setItem('gaztrans-reviews', JSON.stringify(sampleReviews));
+                displayReviews(sampleReviews);
+            } else {
+                displayReviews(savedReviews);
+            }
+        }
+
+        // Отображение отзывов
+        function displayReviews(reviews) {
+            const reviewsContainer = document.getElementById('reviews-container');
+            reviewsContainer.innerHTML = '';
+            
+            reviews.forEach(review => {
+                const reviewEl = document.createElement('div');
+                reviewEl.className = 'review-card';
+                reviewEl.innerHTML = `
+                    <div class="review-header">
+                        <div class="review-author">
+                            <div class="author-avatar">${getInitials(review.name)}</div>
+                            <div class="author-info">
+                                <h4>${review.name}</h4>
+                                ${review.company ? `<span class="company">${review.company}</span>` : ''}
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            ${renderStars(review.rating)}
+                            <span>${review.rating}</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>${review.text}</p>
+                    </div>
+                    <div class="review-date">
+                        <i class="far fa-calendar-alt"></i> ${review.date}
+                    </div>
+                `;
+                reviewsContainer.appendChild(reviewEl);
+            });
+        }
+
+        // Получение инициалов для аватара
+        function getInitials(name) {
+            return name.split(' ').map(part => part[0]).join('').toUpperCase();
+        }
+
+        // Отрисовка звезд рейтинга
+        function renderStars(rating) {
+            let stars = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= Math.floor(rating)) {
+                    stars += '<i class="fas fa-star"></i>';
+                } else if (i - 0.5 <= rating) {
+                    stars += '<i class="fas fa-star-half-alt"></i>';
+                } else {
+                    stars += '<i class="far fa-star"></i>';
+                }
+            }
+            return stars;
+        }
+
+        // Настройка звезд рейтинга
+        function setupRatingStars() {
+            const stars = document.querySelectorAll('.rating-stars i');
+            stars.forEach(star => {
+                star.addEventListener('click', function() {
+                    const rating = parseInt(this.getAttribute('data-rating'));
+                    document.getElementById('review-rating').value = rating;
+                    
+                    // Подсветка звезд
+                    stars.forEach((s, index) => {
+                        if (index < rating) {
+                            s.classList.remove('far');
+                            s.classList.add('fas');
+                        } else {
+                            s.classList.remove('fas');
+                            s.classList.add('far');
+                        }
+                    });
+                });
+            });
+        }
+
+        // Настройка формы
+        function setupForm() {
+            const form = document.getElementById('review-form');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Проверка капчи
+                const captchaText = document.getElementById('captcha-text').textContent;
+                const captchaInput = document.getElementById('captcha-input').value;
+                
+                if (captchaInput !== captchaText) {
+                    alert('Неверно введена капча!');
+                    generateCaptcha();
+                    return;
+                }
+                
+                // Сбор данных формы
+                const newReview = {
+                    name: document.getElementById('review-name').value,
+                    company: document.getElementById('review-company').value,
+                    rating: parseFloat(document.getElementById('review-rating').value),
+                    text: document.getElementById('review-text').value,
+                    date: new Date().toLocaleDateString('ru-RU', {
+                        day: 'numeric',
+                        month: 'long',
+                        year: 'numeric'
+                    })
+                };
+                
+                // Сохранение отзыва
+                const savedReviews = JSON.parse(localStorage.getItem('gaztrans-reviews')) || [];
+                savedReviews.unshift(newReview); // Добавляем в начало
+                localStorage.setItem('gaztrans-reviews', JSON.stringify(savedReviews));
+                
+                // Обновление отображения
+                displayReviews(savedReviews);
+                
+                // Очистка формы
+                form.reset();
+                document.getElementById('review-rating').value = 0;
+                resetStars();
+                generateCaptcha();
+                document.getElementById('captcha-input').value = '';
+                
+                // Прокрутка к новому отзыву
+                document.getElementById('reviews-container').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                alert('Спасибо за ваш отзыв! Он будет опубликован после модерации.');
+            });
+        }
+
+        // Сброс звезд рейтинга
+        function resetStars() {
+            const stars = document.querySelectorAll('.rating-stars i');
+            stars.forEach(star => {
+                star.classList.remove('fas');
+                star.classList.add('far');
+            });
+        }
+    </script>
+</body>
+</html>

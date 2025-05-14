@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - ГазТранс</title>
+    <link rel="stylesheet" href="css/gazprom-style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="gazprom-header">
+        <div class="container">
+            <div class="gazprom-logo">
+                <img src="images/gazprom-logo.png" alt="ГазТранс">
+                <h1>ГазТранс</h1>
+            </div>
+            <nav class="gazprom-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                    <li><a href="reviews.html">Отзывы</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container contacts-page">
+        <a href="index.html" class="gazprom-back-button">← Назад</a>
+        
+        <h2 class="section-title"><span>Контакты</span></h2>
+        
+        <div class="contacts-grid">
+            <section class="contact-info">
+                <h3><i class="fas fa-building"></i> Головной офис</h3>
+                <p>117997, Москва, ул. Наметкина, д. 16</p>
+                
+                <h3><i class="fas fa-phone-alt"></i> Телефоны</h3>
+                <ul class="contact-list">
+                    <li>Единый call-центр: <strong>8 800 700-33-03</strong></li>
+                    <li>Пресс-служба: <strong>+7 (495) 919-30-30</strong></li>
+                    <li>Техподдержка: <strong>+7 (495) 919-44-44</strong></li>
+                </ul>
+                
+                <h3><i class="fas fa-envelope"></i> Email</h3>
+                <ul class="contact-list">
+                    <li>Общие вопросы: <strong>info@gaztrans.ru</strong></li>
+                    <li>Коммерческие предложения: <strong>commerce@gaztrans.ru</strong></li>
+                </ul>
+                
+                <h3><i class="fas fa-clock"></i> Режим работы</h3>
+                <p>Пн-Пт: 9:00-18:00<br>Сб-Вс: выходной</p>
+            </section>
+            
+            <section class="contact-form-section">
+                <h3><i class="fas fa-paper-plane"></i> Обратная связь</h3>
+                <form class="gazprom-form">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group captcha-group">
+                        <label>Введите капчу:</label>
+                        <div class="gazprom-captcha">A7B9C2</div>
+                        <input type="text" required>
+                    </div>
+                    <button type="submit" class="gazprom-button">Отправить</button>
+                </form>
+            </section>
+        </div>
+        
+        <section class="office-photo">
+            <h3><i class="fas fa-camera"></i> Наш офис</h3>
+            <div class="photo-placeholder">
+                <img src="images/office-building.jpg" alt="Здание головного офиса ГазТранс">
+                <p class="photo-caption">Головной офис компании ГазТранс</p>
+            </div>
+        </section>
+        
+        <section class="regional-offices">
+            <h3><i class="fas fa-map-marker-alt"></i> Региональные представительства</h3>
+            <div class="offices-grid">
+                <div class="office-card">
+                    <h4>Северо-Западный филиал</h4>
+                    <p>Санкт-Петербург, ул. Газовиков, 15</p>
+                    <p>Телефон: +7 (812) 333-45-67</p>
+                </div>
+                <div class="office-card">
+                    <h4>Сибирский филиал</h4>
+                    <p>Новосибирск, ул. Транспортная, 42</p>
+                    <p>Телефон: +7 (383) 210-50-50</p>
+                </div>
+                <div class="office-card">
+                    <h4>Южный филиал</h4>
+                    <p>Ростов-на-Дону, пр. Стачки, 88</p>
+                    <p>Телефон: +7 (863) 250-40-40</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="gazprom-footer">
+        <div class="container">
+            <p>© 2023 ГазТранс. Все права защищены.</p>
+            <p>SSL сертификат подтверждён <span class="ssl-verified">✓</span></p>
+        </div>
+    </footer>
+</body>
+</html>

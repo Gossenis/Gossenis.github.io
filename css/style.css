@@ -1,0 +1,1017 @@
+.calculator {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--gazprom-blue);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--gazprom-dark-blue);
+}
+
+#calculation-result {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--gazprom-light-blue);
+    border-radius: 4px;
+    display: none;
+}
+
+#captcha-image {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-align: center;
+    user-select: none;
+}
+
+.advantages {
+    margin: 3rem 0;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.advantage-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.advantage-card h3 {
+    color: var(--gazprom-blue);
+    margin-bottom: 0.5rem;
+}
+.gazprom-calculator {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #0072CE;
+}
+
+.section-title span {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #E30613;
+}
+
+.gas-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    margin-bottom: 20px;
+}
+
+.form-row label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.gazprom-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.gazprom-button {
+    background: #E30613;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.gazprom-button:hover {
+    background: #C00511;
+}
+
+.gazprom-captcha {
+    background: #f0f0f0;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 10px 0;
+    user-select: none;
+}
+.hero-section {
+    background: linear-gradient(rgba(0, 82, 160, 0.85), rgba(0, 82, 160, 0.85)), url('../images/gas-pipeline.jpg');
+    background-size: cover;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    font-weight: 300;
+}
+/* Стили для страницы "О компании" */
+.about-page {
+    padding: 40px 0;
+}
+
+.gazprom-back-button {
+    display: inline-block;
+    color: var(--gazprom-blue);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 30px;
+    padding: 8px 15px;
+    border: 1px solid var(--gazprom-blue);
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.gazprom-back-button:hover {
+    background-color: var(--gazprom-blue);
+    color: white;
+}
+
+.section-title {
+    font-size: 32px;
+    color: var(--gazprom-dark-blue);
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title span {
+    position: relative;
+}
+
+.section-title span:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--gazprom-red);
+}
+
+.about-section {
+    margin-bottom: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.subsection-title {
+    color: var(--gazprom-blue);
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--gazprom-red);
+    padding-left: 15px;
+}
+
+.about-content {
+    line-height: 1.6;
+    color: #444;
+}
+
+.gazprom-list {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.gazprom-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.gazprom-list li:before {
+    content: '•';
+    color: var(--gazprom-red);
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.gazprom-footer {
+    background: var(--gazprom-dark-blue);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.ssl-verified {
+    color: #4CAF50;
+    font-weight: bold;
+}
+/* Стили для страницы "Услуги" */
+.services-page {
+    padding: 40px 0;
+}
+
+.services-intro {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 4px solid var(--gazprom-blue);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: var(--gazprom-dark-blue);
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.service-features {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+.service-features li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.service-features li:before {
+    content: '✓';
+    color: var(--gazprom-red);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.gazprom-button {
+    background: var(--gazprom-blue);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: inline-block;
+}
+
+.gazprom-button:hover {
+    background: var(--gazprom-dark-blue);
+}
+
+.why-us {
+    background: var(--gazprom-light-gray);
+    padding: 40px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.advantages-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.advantage-item {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.advantage-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--gazprom-red);
+    margin-right: 15px;
+    min-width: 40px;
+}
+
+.advantage-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+/* Стили для страницы контактов */
+.contacts-page {
+    padding: 40px 0;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.contact-info {
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info h3 {
+    color: var(--gazprom-blue);
+    font-size: 20px;
+    margin: 25px 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info h3:first-child {
+    margin-top: 0;
+}
+
+.contact-info h3 i {
+    margin-right: 10px;
+    color: var(--gazprom-red);
+}
+
+.contact-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact-list li {
+    margin-bottom: 8px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.contact-list li:before {
+    content: '•';
+    color: var(--gazprom-red);
+    position: absolute;
+    left: 15px;
+}
+
+.gazprom-form {
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.captcha-group {
+    margin-top: 30px;
+}
+
+.gazprom-captcha {
+    background: #f0f0f0;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 10px 0;
+    user-select: none;
+}
+
+.office-photo {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.photo-placeholder {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.photo-placeholder img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+.photo-caption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+}
+
+.regional-offices {
+    margin-top: 50px;
+}
+
+.offices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.office-card {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid var(--gazprom-blue);
+}
+
+.office-card h4 {
+    color: var(--gazprom-blue);
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Анимации для новых отзывов */
+.review-card {
+    animation: fadeIn 0.5s ease-out;
+    transform-origin: top;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Улучшенные стили формы */
+.review-form {
+    transition: all 0.3s;
+}
+
+.review-form:invalid button {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.review-form:invalid button:hover {
+    background: var(--gazprom-blue);
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 480px) {
+    .review-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .review-rating {
+        margin-top: 10px;
+    }
+    
+    .author-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+.calculator {
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.calculator select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+}
+
+.calculation-result {
+    margin-top: 30px;
+    padding: 20px;
+    background: var(--gazprom-light-blue);
+    border-radius: 5px;
+    display: none;
+}
+
+.calculation-result h3 {
+    color: var(--gazprom-blue);
+    margin-top: 0;
+}
+
+.calculation-details {
+    margin-top: 15px;
+}
+
+.calculation-details p {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.calculation-details span {
+    font-weight: 500;
+}
+
+.calculation-total {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gazprom-red);
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+}
+/* Новые стили для главной страницы */
+.hero-button {
+    margin-top: 30px;
+    padding: 15px 40px;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.key-indicators {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 50px 0;
+}
+
+.indicator-card {
+    background: white;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.indicator-card i {
+    font-size: 40px;
+    color: var(--gazprom-blue);
+}
+
+.indicator-value {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--gazprom-blue);
+}
+
+.indicator-label {
+    font-size: 16px;
+    color: #666;
+}
+
+.about-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 60px 0;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.advantages-section {
+    margin: 80px 0;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.advantage-card {
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.advantage-card:hover {
+    transform: translateY(-5px);
+}
+
+.advantage-card i {
+    font-size: 40px;
+    color: var(--gazprom-red);
+    margin-bottom: 20px;
+}
+
+.advantage-card h3 {
+    color: var(--gazprom-blue);
+    margin: 15px 0;
+}
+
+.news-section {
+    margin: 80px 0;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.news-card {
+    background: white;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.news-date {
+    color: var(--gazprom-red);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.news-card h3 {
+    color: var(--gazprom-blue);
+    margin: 10px 0;
+}
+
+.news-link {
+    color: var(--gazprom-blue);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.news-link:hover {
+    text-decoration: underline;
+}
+
+.news-archive {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.gazprom-button-outline {
+    background: transparent;
+    border: 2px solid var(--gazprom-blue);
+    color: var(--gazprom-blue);
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.gazprom-button-outline:hover {
+    background: var(--gazprom-blue);
+    color: white;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo img {
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.footer-links h4,
+.footer-contacts h4 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-contacts p {
+    color: #ccc;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+    color: #aaa;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .about-preview {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-subtitle {
+        font-size: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .gazprom-header {
+        padding: 10px 0;
+    }
+    
+    .gazprom-logo img {
+        height: 40px;
+        margin-right: 10px;
+    }
+    
+    .gazprom-logo h1 {
+        font-size: 20px;
+    }
+    
+    .gazprom-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .gazprom-nav li {
+        margin: 5px 10px;
+    }
+    
+    .gazprom-nav a {
+        font-size: 14px;
+    }
+}
+.hero-section {
+    padding: 60px 0;
+    background-position: center;
+}
+
+.hero-title {
+    font-size: 28px;
+    line-height: 1.3;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+}
+
+.hero-button {
+    padding: 12px 25px;
+    font-size: 16px;
+}
+.key-indicators {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.indicator-card {
+    padding: 15px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.indicator-card i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.indicator-value {
+    font-size: 22px;
+}
+.about-preview {
+    grid-template-columns: 1fr;
+}
+
+.about-text {
+    order: 2;
+    margin-top: 20px;
+}
+
+.about-image {
+    order: 1;
+}
+.advantages-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.advantage-card {
+    padding: 20px;
+}
+.calculator {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.gazprom-button {
+    width: 100%;
+    padding: 12px;
+}
+.news-grid {
+    grid-template-columns: 1fr;
+}
+
+.news-card {
+    padding: 20px;
+}
+.mobile-menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .gazprom-nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--gazprom-dark-blue);
+        padding: 15px;
+        z-index: 100;
+    }
+    
+    .gazprom-nav.active {
+        display: block;
+    }
+    
+    .gazprom-nav ul {
+        flex-direction: column;
+    }
+    
+    .gazprom-nav li {
+        margin: 10px 0;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h2, h3 {
+    line-height: 1.3;
+}
+button, .gazprom-button {
+    min-width: 44px;
+    min-height: 44px;
+}
